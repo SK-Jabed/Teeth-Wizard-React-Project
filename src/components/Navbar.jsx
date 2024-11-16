@@ -1,91 +1,67 @@
+import React from "react";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png"
 
 const Navbar = () => {
+    const navLinks = (
+      <>
+        <li>
+          <NavLink className={({ isActive }) => isActive ? "text-lg font-semibold text-white" : "text-lg font-medium text-gray-800 hover:text-white"} to={"/"}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink className={({ isActive }) => isActive ? "text-lg font-semibold text-white" : "text-lg font-medium text-gray-800 hover:text-white"} to={"/treatments"}>All Treatments</NavLink>
+        </li>
+        <li>
+          <NavLink className={({ isActive }) => isActive ? "text-lg font-semibold text-white" : "text-lg font-medium text-gray-800 hover:text-white"} to={"/appointments"}>My appointments</NavLink>
+        </li>
+        <li>
+          <NavLink className={({ isActive }) => isActive ? "text-lg font-semibold text-white" : "text-lg font-medium text-gray-800 hover:text-white"} to={"/profile"}>Profile</NavLink>
+        </li>
+      </>
+    );
+
     return (
-      <div>
-        <div className="container w-11/12 mx-auto">
-          <div className="mx-auto flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-center pt-4 md:pt-8 md:pb-6">
-            <div className="flex items-center justify-start space-x-1">
-              <img className="w-26 h-20" src={logo} alt="Project Logo"></img>
-              <h2 className="text-2xl font-bold">
-                DREAM <span className="text-red-500">11</span>
-              </h2>
-            </div>
-            <div className="flex items-center gap-3 md:gap-12">
-              <ul className="hidden lg:flex items-center gap-12">
-                <li className="text-lg font-medium text-gray-400 hover:text-black hover:font-semibold">
-                  <a href="#">Home</a>
-                </li>
-                <li className="text-lg font-medium text-gray-400 hover:text-black hover:font-semibold">
-                  <a href="#">Fixture</a>
-                </li>
-                <li className="text-lg font-medium text-gray-400 hover:text-black hover:font-semibold">
-                  <a href="#">Teams</a>
-                </li>
-                <li className="text-lg font-medium text-gray-400 hover:text-black hover:font-semibold">
-                  <a href="#">Schedules</a>
-                </li>
-              </ul>
-              <div className="flex items-center space-x-2 border-2 border-solid border-yellow-300 py-3 px-5 rounded-xl">
-                {/* <p className="text-lg font-semibold ">
-                  <span>{coin}</span> Coin
-                </p>
-                <img src={coinPng} alt="Coin Image"></img> */}
-              </div>
-              <div className="bg-yellow-200 flex items-center justify-center w-12 h-12 rounded-full">
-                <a href="#">
-                  <i className="fa-regular fa-circle-user text-2xl"></i>
-                </a>
+      <div className="bg-purple-800">
+        <div className="container w-11/12 mx-auto py-4">
+          <div className="mx-auto flex justify-between items-center">
+            <div className="dropdown lg:hidden relative ml-2">
+              <div
+                tabindex="0"
+                role="button"
+                className="btn border-2 p-3 border-solid rounded-full lg:hidden"
+              >
+                <HiMenuAlt1 className="text-xl font-bold" />
               </div>
 
-              <div className="dropdown lg:hidden relative ml-2">
-                
-                <div
-                  tabindex="0"
-                  role="button"
-                  className="btn p-4 bg-userBorderColor border-2 border-solid rounded-full lg:hidden hover:bg-userBorderColor"
-                >
-                  <i className="fa-solid fa-bars"></i>
+              <ul
+                tabindex="0"
+                className="menu menu-sm dropdown-content bg-cyan-500 rounded-box z-[1] mt-3 w-52 p-4 shadow absolute left-0"
+              >
+                {navLinks}
+              </ul>
+            </div>
+            <div className="flex items-center">
+              <img className="w-16 hidden md:block" src={logo} alt="Project Logo"></img>
+              <h2 className="text-2xl font-bold text-orange-500 ml-4 md:ml-0">
+                TEETH <span className="text-white">WIZARD</span>
+              </h2>
+            </div>
+            <div className="">
+              <ul className="hidden lg:flex items-center justify-center gap-6">
+                {navLinks}
+              </ul>
+            </div>
+            <div>
+              <button
+                // onClick={() => addPlayerToQueue(player)}
+                type="button"
+                className="group flex h-14 w-full items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-2xl hover:shadow-purple-600/30"
+              >
+                <div className="flex h-full w-full px-8  items-center justify-center rounded-lg bg-gray-900 transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out text-lg font-semibold">
+                  Login
                 </div>
-                
-                <ul
-                  tabindex="0"
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-0"
-                >
-                  <li>
-                    <a
-                      className="text-xl hover:font-bold hover:transition duration-300 hover:ease-in-out"
-                      href="#index.html"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xl text-primaryTextColor hover:transition duration-300 ease-in-out hover:font-bold hover:primaryTextColor"
-                      href="#"
-                    >
-                      Fixture
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xl text-primaryTextColor hover:transition duration-300 ease-in-out hover:font-bold hover:primaryTextColor"
-                      href="#"
-                    >
-                      Teams
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xl text-primaryTextColor hover:transition duration-300 ease-in-out hover:font-bold hover:primaryTextColor"
-                      href="#"
-                    >
-                      Schedules
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              </button>
             </div>
           </div>
         </div>

@@ -1,12 +1,11 @@
 import React from "react";
 
-
-const HomePage = () => {
+const Treatments = () => {
     return (
         <div>
-            Homepage
+            All Treatments
         </div>
     );
 };
 
-export default HomePage;
+export default Treatments;
