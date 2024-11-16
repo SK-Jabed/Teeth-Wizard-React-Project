@@ -1,3 +1,4 @@
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
     return (
@@ -5,7 +6,7 @@ const Navbar = () => {
         <div className="container w-11/12 mx-auto">
           <div className="mx-auto flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-center pt-4 md:pt-8 md:pb-6">
             <div className="flex items-center justify-start space-x-1">
-              <img src={logo} alt="Project Logo"></img>
+              <img className="w-26 h-20" src={logo} alt="Project Logo"></img>
               <h2 className="text-2xl font-bold">
                 DREAM <span className="text-red-500">11</span>
               </h2>
@@ -26,10 +27,10 @@ const Navbar = () => {
                 </li>
               </ul>
               <div className="flex items-center space-x-2 border-2 border-solid border-yellow-300 py-3 px-5 rounded-xl">
-                <p className="text-lg font-semibold ">
+                {/* <p className="text-lg font-semibold ">
                   <span>{coin}</span> Coin
                 </p>
-                <img src={coinPng} alt="Coin Image"></img>
+                <img src={coinPng} alt="Coin Image"></img> */}
               </div>
               <div className="bg-yellow-200 flex items-center justify-center w-12 h-12 rounded-full">
                 <a href="#">
@@ -38,7 +39,7 @@ const Navbar = () => {
               </div>
 
               <div className="dropdown lg:hidden relative ml-2">
-                {/* eslint-disable-next-line react/no-unknown-property */}
+                
                 <div
                   tabindex="0"
                   role="button"
@@ -46,7 +47,7 @@ const Navbar = () => {
                 >
                   <i className="fa-solid fa-bars"></i>
                 </div>
-                {/* eslint-disable-next-line react/no-unknown-property */}
+                
                 <ul
                   tabindex="0"
                   className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-0"
