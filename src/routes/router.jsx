@@ -14,6 +14,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>,
+        loader: () => fetch("/service.json"),
       },
       {
         path: "/treatments",

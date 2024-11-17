@@ -22,7 +22,7 @@ const Navbar = () => {
     );
 
     return (
-      <div className="bg-purple-800">
+      <div className="bg-[#9538E2]">
         <div className="container w-11/12 mx-auto py-4">
           <div className="mx-auto flex justify-between items-center">
             <div className="dropdown lg:hidden relative ml-2">
@@ -42,7 +42,11 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex items-center">
-              <img className="w-16 hidden md:block" src={logo} alt="Project Logo"></img>
+              <img
+                className="w-16 hidden md:block"
+                src={logo}
+                alt="Project Logo"
+              ></img>
               <h2 className="text-2xl font-bold text-orange-500 ml-4 md:ml-0">
                 TEETH <span className="text-white">WIZARD</span>
               </h2>
