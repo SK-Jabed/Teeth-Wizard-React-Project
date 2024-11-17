@@ -25,9 +25,6 @@ const ServiceCard = ({ service }) => {
             </button>
           </Link> */}
           <Link>
-            {/* <button className="badge badge-outline p-4 bg-primary text-white font-bold">
-              Checkout More
-            </button> */}
             <button
               // onClick={() => addPlayerToQueue(player)}
               type="button"
