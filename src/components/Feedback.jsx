@@ -47,7 +47,6 @@ const Feedback = ({ feedbackData }) => {
                   className="mask mask-star"
                 />
               </div>
-              {/* <button className="btn btn-primary">Buy Now</button> */}
               <button
                 // onClick={() => addPlayerToQueue(player)}
                 type="button"
