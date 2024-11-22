@@ -19,11 +19,6 @@ const ServiceCard = ({ service }) => {
               Price: ${cost}
             </p>
           </div>
-          {/* <Link to={`/gadget/${product_id}`} className="mt-4">
-            <button className="px-6 py-3 border-2 border-[#9538E2] text-[#9538E2] text-lg font-semibold bg-white rounded-full hover:bg-[#9538E2] hover:text-white">
-              View Details
-            </button>
-          </Link> */}
           <Link>
             <button
               // onClick={() => addPlayerToQueue(player)}
