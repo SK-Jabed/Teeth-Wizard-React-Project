@@ -48,7 +48,6 @@ const Feedback = ({ feedbackData }) => {
                 />
               </div>
               <button
-                // onClick={() => addPlayerToQueue(player)}
                 type="button"
                 className="group flex h-12 w-[150px] items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-2xl hover:shadow-purple-600/30"
               >
