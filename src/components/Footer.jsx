@@ -7,7 +7,7 @@ const Footer = () => {
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">Home</a>
           <a className="link link-hover">All Treatments</a>
-          <a className="link link-hover">My appointments</a>
+          <a className="link link-hover">My Appointments</a>
           <a className="link link-hover">Profile</a>
         </nav>
         <nav>
@@ -49,8 +49,7 @@ const Footer = () => {
         </nav>
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by TEETH
-            WIZARD
+            Copyright © {new Date().getFullYear()} - All right reserved by TEETH WIZARD
           </p>
         </aside>
       </footer>
