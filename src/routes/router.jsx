@@ -5,7 +5,6 @@ import Treatments from "../pages/Treatments";
 import Appointments from "../pages/Appointments";
 import Profile from "../pages/Profile";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
